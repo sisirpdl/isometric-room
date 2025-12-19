@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { T, useTask } from '@threlte/core';
-	import { useGltf, useGltfAnimations, interactivity } from '@threlte/extras';
+	import { useGltf, useGltfAnimations, interactivity, useDraco } from '@threlte/extras';
 	import { createEventDispatcher } from 'svelte';
 	import {
 		Vector3,
@@ -42,10 +42,12 @@
 		filter: (hits) => hits.filter((hit) => hit.object.userData.isInteractive)
 	});
 
+	// Setup Draco loader for compressed models
+	const dracoLoader = useDraco('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+
 	// Load 3D model
 	const gltf = useGltf('/models/isometric_room_002.glb', {
-		useDraco: true,
-		dracoDecoderPath: 'https://www.gstatic.com/draco/versioned/decoders/1.5.6/'
+		dracoLoader
 	});
 	const { actions } = useGltfAnimations(gltf);
 
