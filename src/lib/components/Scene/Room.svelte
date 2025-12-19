@@ -43,7 +43,9 @@
 	});
 
 	// Load 3D model
-	const gltf = useGltf('/models/isometric_room_002.glb');
+	const gltf = useGltf('/models/isometric_room_002.glb', {
+		draco: 'https://www.gstatic.com/draco/v1/decoders/'
+	});
 	const { actions } = useGltfAnimations(gltf);
 
 	let interactiveMeshes: Mesh[] = [];
