@@ -16,9 +16,7 @@
 	// Configuration: Map object names to page routes
 	const INTERACTIVE_OBJECTS: Record<string, string> = {
 		screen: 'projects',
-		guitar: 'hobby',
 		books: 'research',
-		nataraj: 'research',
 		hitbox_experience: 'experience',
 		hitbox_tech: 'tech',
 		hitbox_education: 'education',
@@ -35,6 +33,12 @@
 		bag: 'rotate_bag',
 		guitar: 'rotate_guitar',
 		cup: 'rotate_cup'
+	};
+
+	// Configuration: Map special actions to page routes (for objects that need both animation AND navigation)
+	const SPECIAL_ACTION_PAGES: Record<string, string> = {
+		nataraj: 'research',
+		guitar: 'hobby'
 	};
 
 	// Configure interactivity plugin with filter to prevent clicking non-interactive objects
@@ -204,14 +208,23 @@
 
 			if (object) {
 				console.log(`Found special object: ${object.name} (searched for ${name}), tagging...`);
-				// Only printer should glow from special actions list
+
+				// Determine which objects should glow
+				// Printer, nataraj, and guitar should glow
 				const shouldGlow =
 					object.name.toLowerCase().includes('printer') ||
-					object.name.toLowerCase().includes('print');
+					object.name.toLowerCase().includes('print') ||
+					name === 'nataraj' ||
+					name === 'guitar';
+
+				// Check if this object also has a target page
+				const targetPage = SPECIAL_ACTION_PAGES[name];
+
 				tagObjectAsInteractive(object, {
 					specialAction: action,
 					objectName: name,
-					glow: shouldGlow
+					glow: shouldGlow,
+					...(targetPage && { targetPage })
 				});
 			} else {
 				console.warn(`Special action object not found: ${name}`);
@@ -367,6 +380,12 @@
 				if (targetObject.userData.isRotating) return;
 				targetObject.userData.isRotating = true;
 
+				// Determine rotation duration based on object
+				// nataraj and guitar: 500ms (0.5 seconds)
+				// others: 1000ms (1 second)
+				const duration =
+					objectName === 'nataraj' || objectName === 'guitar' ? 500 : 1000;
+
 				const onFinish = () => {
 					targetObject.userData.isRotating = false;
 					performNavigation();
@@ -374,9 +393,9 @@
 
 				// If there is a target page, wait for rotation to finish before navigating
 				if (targetPage) {
-					animateRotation(targetObject, 1000, onFinish);
+					animateRotation(targetObject, duration, onFinish);
 				} else {
-					animateRotation(targetObject, 1000, () => {
+					animateRotation(targetObject, duration, () => {
 						targetObject.userData.isRotating = false;
 					});
 					performNavigation();

@@ -24,3 +24,6 @@ vite.config.ts.timestamp-*
 
 # Local documentation
 AI_GUIDE.md
+
+# Large files
+static/models/isometric_room_002_original.glb
