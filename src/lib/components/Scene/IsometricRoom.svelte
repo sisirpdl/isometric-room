@@ -21,6 +21,13 @@
       
       // Move room up on mobile to center it better
       offsetY = isMobile ? 1.0 : 0
+
+      // Update controls to respect the new zoom level when resetting
+      if (controls) {
+        controls.object.zoom = zoom
+        controls.object.updateProjectionMatrix()
+        controls.saveState()
+      }
     }
     
     handleResize()
