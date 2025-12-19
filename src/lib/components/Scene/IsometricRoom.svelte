@@ -47,9 +47,9 @@
       rotation={[54.7 * Math.PI / 180, 45 * Math.PI / 180, 0]}
       zoom={zoom}
     >
-      <OrbitControls 
+      <OrbitControls
         bind:ref={controls}
-        enableZoom={true} 
+        enableZoom={true}
         enableDamping={true}
         dampingFactor={0.05}
         rotateSpeed={1.5}
@@ -59,9 +59,9 @@
     <Suspense>
       <Lights />
       <T.Group position={[0, offsetY, 0]}>
-        <Room 
-          on:objectClick 
-          on:specialAction={handleSpecialAction} 
+        <Room
+          on:objectClick
+          on:specialAction={handleSpecialAction}
         />
       </T.Group>
     </Suspense>

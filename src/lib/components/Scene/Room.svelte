@@ -44,7 +44,8 @@
 
 	// Load 3D model
 	const gltf = useGltf('/models/isometric_room_002.glb', {
-		draco: true
+		useDraco: true,
+		dracoDecoderPath: 'https://www.gstatic.com/draco/versioned/decoders/1.5.6/'
 	});
 	const { actions } = useGltfAnimations(gltf);
 
