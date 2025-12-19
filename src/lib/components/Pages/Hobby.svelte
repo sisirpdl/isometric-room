@@ -1,12 +1,6 @@
 <script>
 	const hobbies = [
 		{
-			name: 'Competitive Chess',
-			description:
-				'Engineered a competitive chess engine and enjoy playing strategically. Interested in search algorithms and positional understanding.',
-			focus: ['Strategy', 'Algorithms', 'Competition']
-		},
-		{
 			name: 'Fishing',
 			description:
 				'Passionate about the outdoors and fishing. Developed an AI-powered fishing guide to help others identify fish and find the best spots.',
