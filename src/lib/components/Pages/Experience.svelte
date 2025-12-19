@@ -4,16 +4,21 @@
 			title: 'Security Software Engineering Intern',
 			company: 'Google Consortium of Cyber Clinics',
 			period: 'Aug 2024 - Present',
-			description:
-				'Fine-tuning Microsoft Phi-3 to engineer Modular Agents that enhances adaptability towards natural language commands, enabling automated threat hunting across Sentinel log streams, reducing investigation time by 40%. Developing Python pipelines to automate and validate the remediation of Tier-1 alerts, reducing manual effort by 80% for high-volume events and recovering over 15 hours of analyst time per week. Leveraging real-time threat intelligence from VirusTotal and Microsoft Graph to efficiently inject context into alerts, resolving 15+ recurring cases weekly by transforming signatures into auto-remediation rules.',
+			bullets: [
+				'Fine-tuning Microsoft Phi-3 to engineer Modular Agents that enhances adaptability towards natural language commands, enabling automated threat hunting across Sentinel log streams, reducing investigation time by 40%',
+				'Developing Python pipelines to automate and validate the remediation of Tier-1 alerts, reducing manual effort by 80% for high-volume events and recovering over 15 hours of analyst time per week',
+				'Leveraging real-time threat intelligence from VirusTotal and Microsoft Graph to efficiently inject context into alerts, resolving 15+ recurring cases weekly by transforming signatures into auto-remediation rules'
+			],
 			technologies: ['Microsoft Phi-3', 'Python', 'Sentinel', 'VirusTotal', 'Microsoft Graph']
 		},
 		{
 			title: 'Computer Science Researcher',
 			company: 'Dakota State University',
 			period: 'Aug 2023 - Feb 2024',
-			description:
-				'Awarded "Best Undergraduate Research" at the South Dakota State Capitol for excellence in blockchain analysis. Critically evaluated blockchain architectures for secure electronic voting by benchmarking 10+ consensus protocols against data integrity models, synthesizing technical trade-offs into actionable policy recommendations.',
+			bullets: [
+				'Awarded "Best Undergraduate Research" at the South Dakota State Capitol for excellence in blockchain analysis',
+				'Critically evaluated blockchain architectures for secure electronic voting by benchmarking 10+ consensus protocols against data integrity models, synthesizing technical trade-offs into actionable policy recommendations'
+			],
 			technologies: ['Blockchain', 'Consensus Protocols', 'Data Integrity Models']
 		}
 	];
@@ -58,12 +63,17 @@
 					</div>
 				</div>
 
-				<p
-					class="mb-6 max-w-2xl text-[15px] leading-relaxed font-light transition-colors duration-300"
-					style="color: #4b5563;"
-				>
-					{exp.description}
-				</p>
+				<ul class="mb-6 max-w-2xl space-y-2">
+					{#each exp.bullets as bullet}
+						<li
+							class="flex gap-3 text-[15px] leading-relaxed font-light transition-colors duration-300"
+							style="color: #4b5563;"
+						>
+							<span class="mt-2 h-1 w-1 shrink-0 rounded-full" style="background: #9ca3af;"></span>
+							<span>{bullet}</span>
+						</li>
+					{/each}
+				</ul>
 
 				<div class="flex flex-wrap gap-2">
 					{#each exp.technologies as tech}

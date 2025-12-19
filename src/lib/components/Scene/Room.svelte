@@ -183,19 +183,7 @@
 			return found;
 		};
 
-		// Tag page navigation objects
-		Object.entries(INTERACTIVE_OBJECTS).forEach(([name, page]) => {
-			const object = findObject(name);
-			if (object) {
-				// Guitar and books look bad with glow, so we disable it
-				const shouldGlow = name !== 'guitar' && name !== 'books';
-				tagObjectAsInteractive(object, { targetPage: page, glow: shouldGlow });
-			} else {
-				console.warn(`Interactive object not found: ${name}`);
-			}
-		});
-
-		// Tag special action objects
+		// Tag special action objects FIRST (so they take priority)
 		Object.entries(SPECIAL_ACTIONS).forEach(([name, action]) => {
 			let object = findObject(name);
 
@@ -227,6 +215,28 @@
 				});
 			} else {
 				console.warn(`Special action object not found: ${name}`);
+			}
+		});
+
+		// Tag page navigation objects (skip if already tagged by special actions)
+		Object.entries(INTERACTIVE_OBJECTS).forEach(([name, page]) => {
+			const object = findObject(name);
+			if (object) {
+				// Check if this object was already tagged by special actions - if so, skip
+				let alreadyTagged = false;
+				object.traverse((child) => {
+					if ((child as Mesh).isMesh && (child as Mesh).userData.specialAction) {
+						alreadyTagged = true;
+					}
+				});
+
+				if (!alreadyTagged) {
+					// Guitar and books look bad with glow, so we disable it
+					const shouldGlow = name !== 'guitar' && name !== 'books';
+					tagObjectAsInteractive(object, { targetPage: page, glow: shouldGlow });
+				}
+			} else {
+				console.warn(`Interactive object not found: ${name}`);
 			}
 		});
 

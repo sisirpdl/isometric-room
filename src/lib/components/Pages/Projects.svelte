@@ -2,15 +2,21 @@
 	const projects = [
 		{
 			title: 'Literacy Assessment Platform for Elementary Teachers',
-			description:
-				'Implementing a polymorphic assessment engine using Django Abstract Classes to support multiple testing standards (DIBELS, AIMSweb), facilitating seamless zero-downtime content updates and long-term maintainability. Executing a DAG decision tree service to map deficits to interventions, decoupling business logic from the codebase to allow JSON-based editing which significantly accelerated iteration on diagnostic criteria. Utilizing React to develop a schema-driven UI based on API definitions that dynamically adapts to backend models, enhancing user experience and resulting in a 40% reduction in frontend boilerplate code.',
+			bullets: [
+				'Implementing a polymorphic assessment engine using Django Abstract Classes to support multiple testing standards (DIBELS, AIMSweb), facilitating seamless zero-downtime content updates and long-term maintainability',
+				'Executing a DAG decision tree service to map deficits to interventions, decoupling business logic from the codebase to allow JSON-based editing which significantly accelerated iteration on diagnostic criteria',
+				'Utilizing React to develop a schema-driven UI based on API definitions that dynamically adapts to backend models, enhancing user experience and resulting in a 40% reduction in frontend boilerplate code'
+			],
 			link: 'https://github.com/sisirpdl',
 			tags: ['Django', 'React', 'PostgreSQL']
 		},
 		{
 			title: 'Fishing Guide (AI-Powered Outdoor Companion)',
-			description:
-				'Architected a high-performance backend using Go and Kong Gateway to handle 100,000+ concurrent users with sub-50ms latency, utilizing Redis for caching and PostGIS for geospatial queries across 15,000+ water bodies. Engineered a computer vision pipeline using PyTorch, EfficientNetV2, and Triton Inference Server to classify 250+ fish species with <500ms latency, integrating pgvector for semantic search of fishing techniques. Deployed multi-region cloud infrastructure on AWS EKS using Terraform and ArgoCD for GitOps, implementing Istio service mesh to ensure 99.95% system availability and zero-downtime deployments.',
+			bullets: [
+				'Architected a high-performance backend using Go and Kong Gateway to handle 100,000+ concurrent users with sub-50ms latency, utilizing Redis for caching and PostGIS for geospatial queries across 15,000+ water bodies',
+				'Engineered a computer vision pipeline using PyTorch, EfficientNetV2, and Triton Inference Server to classify 250+ fish species with <500ms latency, integrating pgvector for semantic search of fishing techniques',
+				'Deployed multi-region cloud infrastructure on AWS EKS using Terraform and ArgoCD for GitOps, implementing Istio service mesh to ensure 99.95% system availability and zero-downtime deployments'
+			],
 			link: '',
 			tags: [
 				'Go',
@@ -27,22 +33,29 @@
 		},
 		{
 			title: 'Competitive Chess Engine',
-			description:
-				'Engineered an advanced search algorithm utilizing alpha-beta pruning to efficiently prune the decision tree, enabling the engine to explore only strategically relevant lines and achieving a 30% increase in search depth. Integrated a hybrid evaluation system combining PyTorch CNNs with classical heuristics to enhance positional understanding, resulting in strategic play that outperforms standard material counting. Pioneered and embedded Zobrist hashing-based transposition tables to efficiently cache analyzed positions, effectively eliminating redundant calculations during deep searches and significantly accelerating move generation.',
+			bullets: [
+				'Engineered an advanced search algorithm utilizing alpha-beta pruning to efficiently prune the decision tree, enabling the engine to explore only strategically relevant lines and achieving a 30% increase in search depth',
+				'Integrated a hybrid evaluation system combining PyTorch CNNs with classical heuristics to enhance positional understanding, resulting in strategic play that outperforms standard material counting',
+				'Pioneered and embedded Zobrist hashing-based transposition tables to efficiently cache analyzed positions, effectively eliminating redundant calculations during deep searches and significantly accelerating move generation'
+			],
 			link: 'https://github.com/sisirpdl',
 			tags: ['Python', 'PyTorch', 'NumPy']
 		},
 		{
 			title: 'LlamaAnimate: Real-Time AI Lip-Sync',
-			description:
-				'Orchestrated a concurrent inference pipeline integrating LLaMA 2 (via Ollama) and Piper TTS to parallelize text generation and audio synthesis, achieving sub-1000ms latency for seamless, real-time live interactions. Optimized Wav2Lip model inference by embedding intelligent audio chunk buffering to maintain precise visual lip synchronization with dynamic audio streams, ensuring a fluid, cohesive user experience for interactive AI agents.',
+			bullets: [
+				'Orchestrated a concurrent inference pipeline integrating LLaMA 2 (via Ollama) and Piper TTS to parallelize text generation and audio synthesis, achieving sub-1000ms latency for seamless, real-time live interactions',
+				'Optimized Wav2Lip model inference by embedding intelligent audio chunk buffering to maintain precise visual lip synchronization with dynamic audio streams, ensuring a fluid, cohesive user experience for interactive AI agents'
+			],
 			link: 'https://github.com/sisirpdl/LlamaAnimate',
 			tags: ['LLaMA 2', 'Ollama', 'Docker', 'Python']
 		},
 		{
 			title: 'A-Level Notes App',
-			description:
-				'Deployed a scalable Flutter app integrated with Firebase Cloud Firestore to sync notes in real-time across devices, providing robust offline-first access and data persistence to over 10,000+ active users. Embedded a local search index using efficient string matching algorithms to enable instant topic querying without network latency, significantly optimizing student study time and contributing to a 4.8-star average rating.',
+			bullets: [
+				'Deployed a scalable Flutter app integrated with Firebase Cloud Firestore to sync notes in real-time across devices, providing robust offline-first access and data persistence to over 10,000+ active users',
+				'Embedded a local search index using efficient string matching algorithms to enable instant topic querying without network latency, significantly optimizing student study time and contributing to a 4.8-star average rating'
+			],
 			link: 'https://github.com/sisirpdl/alevelnotes',
 			tags: ['Flutter', 'Firebase', 'Google Play']
 		}
@@ -83,12 +96,17 @@
 				</h3>
 
 				<!-- Description -->
-				<p
-					class="mb-6 max-w-2xl text-[15px] leading-relaxed font-light transition-colors duration-300"
-					style="color: #4b5563;"
-				>
-					{project.description}
-				</p>
+				<ul class="mb-6 max-w-2xl space-y-2">
+					{#each project.bullets as bullet}
+						<li
+							class="flex gap-3 text-[15px] leading-relaxed font-light transition-colors duration-300"
+							style="color: #4b5563;"
+						>
+							<span class="mt-2 h-1 w-1 shrink-0 rounded-full" style="background: #9ca3af;"></span>
+							<span>{bullet}</span>
+						</li>
+					{/each}
+				</ul>
 
 				<!-- Tech Stack Pills -->
 				<div class="mb-6 flex flex-wrap gap-2">
