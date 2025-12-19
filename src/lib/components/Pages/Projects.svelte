@@ -1,21 +1,11 @@
 <script>
 	const projects = [
 		{
-			title: 'Literacy Assessment Platform for Elementary Teachers',
-			bullets: [
-				'Implementing a polymorphic assessment engine using Django Abstract Classes to support multiple testing standards (DIBELS, AIMSweb), facilitating seamless zero-downtime content updates and long-term maintainability',
-				'Executing a DAG decision tree service to map deficits to interventions, decoupling business logic from the codebase to allow JSON-based editing which significantly accelerated iteration on diagnostic criteria',
-				'Utilizing React to develop a schema-driven UI based on API definitions that dynamically adapts to backend models, enhancing user experience and resulting in a 40% reduction in frontend boilerplate code'
-			],
-			link: 'https://github.com/sisirpdl',
-			tags: ['Django', 'React', 'PostgreSQL']
-		},
-		{
 			title: 'Fishing Guide (AI-Powered Outdoor Companion)',
 			bullets: [
-				'Architected a high-performance backend using Go and Kong Gateway to handle 100,000+ concurrent users with sub-50ms latency, utilizing Redis for caching and PostGIS for geospatial queries across 15,000+ water bodies',
-				'Engineered a computer vision pipeline using PyTorch, EfficientNetV2, and Triton Inference Server to classify 250+ fish species with <500ms latency, integrating pgvector for semantic search of fishing techniques',
-				'Deployed multi-region cloud infrastructure on AWS EKS using Terraform and ArgoCD for GitOps, implementing Istio service mesh to ensure 99.95% system availability and zero-downtime deployments'
+				'Architecting a high-performance backend using Go and Kong Gateway to handle 100,000+ concurrent users with sub-50ms latency, utilizing Redis for caching and PostGIS for geospatial queries across 15,000+ water bodies',
+				'Engineering a computer vision pipeline using PyTorch, EfficientNetV2, and Triton Inference Server to classify 250+ fish species with <500ms latency, integrating pgvector for semantic search of fishing techniques',
+				'Deploying multi-region cloud infrastructure on AWS EKS using Terraform and ArgoCD for GitOps, implementing Istio service mesh to ensure 99.95% system availability and zero-downtime deployments'
 			],
 			link: '',
 			tags: [
@@ -32,14 +22,31 @@
 			]
 		},
 		{
-			title: 'Competitive Chess Engine',
+			title: 'Advanced Text Analyzer',
 			bullets: [
-				'Engineered an advanced search algorithm utilizing alpha-beta pruning to efficiently prune the decision tree, enabling the engine to explore only strategically relevant lines and achieving a 30% increase in search depth',
-				'Integrated a hybrid evaluation system combining PyTorch CNNs with classical heuristics to enhance positional understanding, resulting in strategic play that outperforms standard material counting',
-				'Pioneered and embedded Zobrist hashing-based transposition tables to efficiently cache analyzed positions, effectively eliminating redundant calculations during deep searches and significantly accelerating move generation'
+				'Increased throughput 24% on 1 GB files by engineering a text analyzer using Tries (prefix search), Hash Tables (O(1) lookups), and a Binomial Heap (top-k extraction)'
+			],
+			link: 'https://github.com/sisirpdl/advance-dsa-sp25/tree/main/100_final_project',
+			tags: ['C++', 'Tries', 'Hash Tables', 'Binomial Heap']
+		},
+		{
+			title: 'Sticky Notes App (Meta Hackathon)',
+			bullets: [
+				'Leveraged cutting-edge IWSDK tools and immersive AR/VR technologies to engineer a spatial sticky notes application for the Meta Quest ecosystem',
+				'Implemented high-fidelity hand grab interactions and precise ray casting algorithms to enable intuitive, physics-based object manipulation in 3D space'
+			],
+			link: '',
+			tags: ['IWSDK', 'AR/VR', 'Meta Quest', 'Ray Casting']
+		},
+		{
+			title: 'Literacy Assessment Platform for Elementary Teachers',
+			bullets: [
+				'Implemented a polymorphic assessment engine using Django Abstract Classes to support multiple testing standards (DIBELS, AIMSweb), facilitating seamless zero-downtime content updates and long-term maintainability',
+				'Executed a DAG decision tree service to map deficits to interventions, decoupling business logic from the codebase to allow JSON-based editing which significantly accelerated iteration on diagnostic criteria',
+				'Utilized React to develop a schema-driven UI based on API definitions that dynamically adapts to backend models, enhancing user experience and resulting in a 40% reduction in frontend boilerplate code'
 			],
 			link: 'https://github.com/sisirpdl',
-			tags: ['Python', 'PyTorch', 'NumPy']
+			tags: ['Django', 'React', 'PostgreSQL']
 		},
 		{
 			title: 'LlamaAnimate: Real-Time AI Lip-Sync',

@@ -11,6 +11,12 @@
 			description:
 				'Passionate about the outdoors and fishing. Developed an AI-powered fishing guide to help others identify fish and find the best spots.',
 			focus: ['Outdoors', 'Nature', 'Conservation']
+		},
+		{
+			name: 'Outdoor Adventures',
+			description:
+				'Finding balance through physical challenges and nature. Whether scaling walls, carving snow, or camping under the stars.',
+			focus: ['Wall Climbing', 'Snowboarding', 'Camping']
 		}
 	];
 </script>
