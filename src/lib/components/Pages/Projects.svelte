@@ -1,25 +1,52 @@
 <script>
 	const projects = [
 		{
-			title: 'Fishing Guide (AI-Powered Outdoor Companion)',
+			title: 'Enterprise Kanban Board',
 			bullets: [
-				'Architecting a high-performance backend using Go and Kong Gateway to handle 100,000+ concurrent users with sub-50ms latency, utilizing Redis for caching and PostGIS for geospatial queries across 15,000+ water bodies',
-				'Engineering a computer vision pipeline using PyTorch, EfficientNetV2, and Triton Inference Server to classify 250+ fish species with <500ms latency, integrating pgvector for semantic search of fishing techniques',
-				'Deploying multi-region cloud infrastructure on AWS EKS using Terraform and ArgoCD for GitOps, implementing Istio service mesh to ensure 99.95% system availability and zero-downtime deployments'
+				'Created a real-time Kanban board application using .NET 8 and Clean Architecture principles, achieving 100% business logic isolation to facilitate comprehensive unit and integration testing',
+				'Enabled real-time synchronization using SignalR to resolve race conditions during concurrent drag-and-drop updates, maintaining sub-42 ms latency for 300 simulated users',
+				'Implemented the Request-Endpoint-Response (REPR) pattern to structure modular API workflows, delivering a functional Trello-style UI with instant activity logging'
+			],
+			link: 'https://github.com/sisirpdl',
+			tags: ['.NET 8', 'SignalR', 'C#', 'Clean Architecture']
+		},
+		{
+			title: 'Literacy Assessment Platform for Elementary Teachers',
+			bullets: [
+				'Led a 6-person Agile team to deploy a web app that automates scoring for literacy assessments, replacing static spreadsheets with a system that tracks historical progress and groups students for immediate academic support',
+				'Structured a data model using Django ORM to track student history, automatically grouping students by skill level to help teachers formulate targeted intervention strategies daily',
+				'Coded React forms that auto-generate based on database configuration, allowing teachers to create new assessment formats without requiring developer intervention'
+			],
+			link: 'https://github.com/sisirpdl',
+			tags: ['Django', 'React', 'PostgreSQL']
+		},
+		{
+			title: 'Sticky Notes App (Meta Hackathon)',
+			bullets: [
+				'Leveraged cutting-edge IWSDK tools and immersive AR/VR technologies to engineer a spatial sticky notes application for the Meta Quest ecosystem',
+				'Implemented high-fidelity hand grab interactions and precise ray casting algorithms to enable intuitive spatial interaction and object placement in 3D space'
 			],
 			link: '',
-			tags: [
-				'Go',
-				'Flutter',
-				'AWS EKS',
-				'Kong Gateway',
-				'Redis',
-				'PostGIS',
-				'PyTorch',
-				'Terraform',
-				'ArgoCD',
-				'Istio'
-			]
+			tags: ['IWSDK', 'AR/VR', 'Meta Quest', 'Ray Casting']
+		},
+		{
+			title: 'LLM-powered Conversational Avatar',
+			bullets: [
+				'Collaborated within a 5-person Agile team to build an interactive virtual avatar that uses LLM-generated speech to drive accurate lip-sync and expressive facial movements, completing 28 user stories',
+				'Reduced latency by 82% under 1000 ms by assembling a concurrent inference pipeline, merging LLaMA2, Wav2Lip, and Text-To-Speech in a docker environment',
+				'Optimized system performance and Wav2Lip inference by implementing concurrent processing techniques (intelligent audio buffer), maximizing throughput to achieve 30 frames per second (FPS) processing speed'
+			],
+			link: 'https://github.com/sisirpdl/LlamaAnimate',
+			tags: ['LLaMA 2', 'Python', 'Docker', 'Wav2Lip']
+		},
+		{
+			title: 'A-Level Notes App',
+			bullets: [
+				'Launched a Flutter app on the Play Store that syncs notes and past papers via Firebase, serving over 10,000 users',
+				'Designed a responsive UI with instant search capabilities, allowing students to find Math and Physics topics immediately and contributing to a 4.8-star average rating'
+			],
+			link: 'https://github.com/sisirpdl/alevelnotes',
+			tags: ['Flutter', 'Firebase', 'Google Play']
 		},
 		{
 			title: 'Advanced Text Analyzer',
@@ -28,43 +55,6 @@
 			],
 			link: 'https://github.com/sisirpdl/advance-dsa-sp25/tree/main/100_final_project',
 			tags: ['C++', 'Tries', 'Hash Tables', 'Binomial Heap']
-		},
-		{
-			title: 'Sticky Notes App (Meta Hackathon)',
-			bullets: [
-				'Leveraged cutting-edge IWSDK tools and immersive AR/VR technologies to engineer a spatial sticky notes application for the Meta Quest ecosystem',
-				'Implemented high-fidelity hand grab interactions and precise ray casting algorithms to enable intuitive, physics-based object manipulation in 3D space'
-			],
-			link: '',
-			tags: ['IWSDK', 'AR/VR', 'Meta Quest', 'Ray Casting']
-		},
-		{
-			title: 'Literacy Assessment Platform for Elementary Teachers',
-			bullets: [
-				'Implemented a polymorphic assessment engine using Django Abstract Classes to support multiple testing standards (DIBELS, AIMSweb), facilitating seamless zero-downtime content updates and long-term maintainability',
-				'Executed a DAG decision tree service to map deficits to interventions, decoupling business logic from the codebase to allow JSON-based editing which significantly accelerated iteration on diagnostic criteria',
-				'Utilized React to develop a schema-driven UI based on API definitions that dynamically adapts to backend models, enhancing user experience and resulting in a 40% reduction in frontend boilerplate code'
-			],
-			link: 'https://github.com/sisirpdl',
-			tags: ['Django', 'React', 'PostgreSQL']
-		},
-		{
-			title: 'LlamaAnimate: Real-Time AI Lip-Sync',
-			bullets: [
-				'Orchestrated a concurrent inference pipeline integrating LLaMA 2 (via Ollama) and Piper TTS to parallelize text generation and audio synthesis, achieving sub-1000ms latency for seamless, real-time live interactions',
-				'Optimized Wav2Lip model inference by embedding intelligent audio chunk buffering to maintain precise visual lip synchronization with dynamic audio streams, ensuring a fluid, cohesive user experience for interactive AI agents'
-			],
-			link: 'https://github.com/sisirpdl/LlamaAnimate',
-			tags: ['LLaMA 2', 'Ollama', 'Docker', 'Python']
-		},
-		{
-			title: 'A-Level Notes App',
-			bullets: [
-				'Deployed a scalable Flutter app integrated with Firebase Cloud Firestore to sync notes in real-time across devices, providing robust offline-first access and data persistence to over 10,000+ active users',
-				'Embedded a local search index using efficient string matching algorithms to enable instant topic querying without network latency, significantly optimizing student study time and contributing to a 4.8-star average rating'
-			],
-			link: 'https://github.com/sisirpdl/alevelnotes',
-			tags: ['Flutter', 'Firebase', 'Google Play']
 		}
 	];
 </script>

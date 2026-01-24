@@ -1,25 +1,36 @@
 <script>
 	const experiences = [
 		{
-			title: 'Security Software Engineering Intern',
-			company: 'Google Consortium of Cyber Clinics',
+			title: 'AI Security Developer',
+			company: 'Cyberclinics, DSU',
 			period: 'Aug 2024 - Present',
 			bullets: [
-				'Fine-tuning Microsoft Phi-3 to engineer Modular Agents that enhances adaptability towards natural language commands, enabling automated threat hunting across Sentinel log streams, reducing investigation time by 40%',
-				'Developing Python pipelines to automate and validate the remediation of Tier-1 alerts, reducing manual effort by 80% for high-volume events and recovering over 15 hours of analyst time per week',
-				'Leveraging real-time threat intelligence from VirusTotal and Microsoft Graph to efficiently inject context into alerts, resolving 15+ recurring cases weekly by transforming signatures into auto-remediation rules'
+				'Developed and deployed modular Python agents, scanning IPs, URLs, and files against VirusTotal and auto-posting results to Microsoft Defender tickets, resulting in a 40% reduction in false positive investigation',
+				'Built automated playbooks for email phishing analysis, parsing headers and bodies and validating attachments, standardizing Tier-1 alert response workflow and achieving a 55% reduction in response time for phishing incidents',
+				'Fine-tuned small language models (Phi-3) to translate natural language into executable KQL, enabling analysts to query complex log streams and saving approximately 8 hours weekly',
+				'Managed student threat detection team on developing custom yara rules, identifying malicious patterns in network traffic, and integrating with SIEM for real-time alerting'
 			],
-			technologies: ['Microsoft Phi-3', 'Python', 'Sentinel', 'VirusTotal', 'Microsoft Graph']
+			technologies: ['Python', 'Phi-3', 'KQL', 'VirusTotal', 'Microsoft Defender', 'YARA', 'SIEM']
+		},
+		{
+			title: 'Software Developer',
+			company: 'SD Elementary Schools Partnership',
+			period: 'Oct 2025 - Apr 2026',
+			bullets: [
+				'Led a 6-person Agile team to deploy a web app that automates scoring for literacy assessments, replacing static spreadsheets with a system that tracks historical progress and groups students for immediate academic support',
+				'Structured a data model using Django ORM to track student history, automatically grouping students by skill level to help teachers formulate targeted intervention strategies daily',
+				'Coded React forms that auto-generate based on database configuration, allowing teachers to create new assessment formats without requiring developer intervention'
+			],
+			technologies: ['Django', 'React', 'PostgreSQL', 'Agile']
 		},
 		{
 			title: 'Computer Science Researcher',
 			company: 'Dakota State University',
 			period: 'Aug 2023 - Feb 2024',
 			bullets: [
-				'Awarded "Best Undergraduate Research" at the South Dakota State Capitol for excellence in blockchain analysis',
-				'Critically evaluated blockchain architectures for secure electronic voting by benchmarking 10+ consensus protocols against data integrity models, synthesizing technical trade-offs into actionable policy recommendations'
+				'Programmed a simulation environment to benchmark 10+ consensus protocols, rigorously quantifying transaction throughput and network fault tolerance to evaluate viability for high-stakes electronic voting'
 			],
-			technologies: ['Blockchain', 'Consensus Protocols', 'Data Integrity Models']
+			technologies: ['Blockchain', 'Consensus Protocols', 'Python']
 		}
 	];
 </script>

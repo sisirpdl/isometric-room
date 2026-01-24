@@ -3,16 +3,21 @@
 		{
 			degree: 'BS in Computer Science — AI Specialization',
 			institution: 'Dakota State University',
-			period: 'May 2027',
-			gpa: '3.72',
+			period: 'Dec 2026',
+			gpa: '3.84',
 			focus: [
 				'Advanced Data Structures & Algorithms',
-				'Foundations of Computation',
+				'Database Management',
 				'Mathematical Foundations of AI',
 				'Artificial Intelligence',
 				'Software Engineering',
 				'Parallel Computing',
-				'Programming languages'
+				'Programming Languages'
+			],
+			awards: [
+				'1st Place, FBLA Nationals - Computer Science (Jun 2025)',
+				'Outstanding Undergraduate Research Award (Mar 2024)',
+				'Math Olympiad Finalist, Nepal (Feb 2022)'
 			]
 		}
 	];
@@ -69,6 +74,21 @@
 						</span>
 					{/each}
 				</div>
+
+				{#if edu.awards}
+					<div class="space-y-2">
+						<h4 class="text-[11px] font-light tracking-[0.2em] uppercase" style="color: #9ca3af;">
+							Awards
+						</h4>
+						<ul class="space-y-1">
+							{#each edu.awards as award}
+								<li class="text-[13px]" style="color: #4b5563;">
+									{award}
+								</li>
+							{/each}
+						</ul>
+					</div>
+				{/if}
 			</article>
 		{/each}
 	</div>

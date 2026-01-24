@@ -2,36 +2,34 @@
 	const techStack = [
 		{
 			category: 'Languages',
-			technologies: ['Python', 'C++', 'Go', 'JavaScript', 'Dart', 'Solidity']
+			technologies: ['C#', 'Rust', 'C++', 'Python', 'SQL', 'KQL', 'JavaScript']
 		},
 		{
-			category: 'Frontend',
-			technologies: ['React', 'Flutter']
+			category: 'Frameworks',
+			technologies: ['.NET 8', 'Django', 'Node.js', 'Flutter', 'SignalR', 'SvelteKit']
 		},
 		{
-			category: 'Backend',
-			technologies: ['Django', 'Node.js']
-		},
-		{
-			category: 'Data & ML',
-			technologies: ['PyTorch', 'TensorFlow']
-		},
-		{
-			category: 'Infrastructure & DevOps',
+			category: 'Tools',
 			technologies: [
-				'Git',
 				'Docker',
-				'AWS EKS',
-				'Terraform',
-				'ArgoCD',
-				'Istio',
-				'Redis',
-				'Kong',
-				'PostGIS',
-				'Linux',
-				'Azure',
+				'Git',
+				'PostgreSQL',
 				'Firebase',
-				'PostgreSQL'
+				'Azure',
+				'AWS',
+				'Linux',
+				'CI/CD'
+			]
+		},
+		{
+			category: 'Practices',
+			technologies: [
+				'REST APIs',
+				'Clean Architecture',
+				'Event-Driven Architecture',
+				'CQRS',
+				'Microservices',
+				'Agile'
 			]
 		}
 	];
